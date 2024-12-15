@@ -156,8 +156,9 @@ def main():
                 for style in styles:
                     data[f'{style} Growth'] = None  # Initialize the column
                     growth, roi = calculate_investment_growth(data, initial_capital, style)
-                    st.write(f"{style} Style Results: Final Value: {growth:.2f}, ROI: {roi:.2f}%")
-
+                    st.write(f"{style} Style Results")
+                    st.write(f"Final Investment Value: {growth:.2f}, ROI: {roi:.2f}%")
+                    st.write('\n')
 
                 plot_investment_comparison(data, styles, start_date, end_date)
 
